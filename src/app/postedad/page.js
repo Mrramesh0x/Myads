@@ -7,7 +7,7 @@ const AllAds = () => {
 
   const fetchAds = async () => {
     try {
-      const res = await fetch("http://localhost:4000/api/allAds");
+      const res = await fetch("https://my-ads-back.onrender.com/api/allAds");
       const data = await res.json();
       setAds(data);
       setLoading(false);
