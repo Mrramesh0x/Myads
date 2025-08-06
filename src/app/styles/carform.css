@@ -1,0 +1,125 @@
+.carform-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+}
+
+.carform-container h2,
+.carform-container h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.carform-container label {
+  display: block;
+  margin: 20px 0 8px;
+  font-weight: 600;
+  color: #222;
+}
+
+.carform-container input[type="text"],
+.carform-container input[type="tel"],
+.carform-container select,
+.carform-container textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.carform-container input:focus,
+.carform-container textarea:focus,
+.carform-container select:focus {
+  border-color: #007bff;
+}
+
+.checkbox-group,
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="radio"] {
+  accent-color: #007bff;
+}
+
+.button-group button {
+  padding: 8px 16px;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.button-group button.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.button-group button:hover {
+  background: #e0e0e0;
+}
+
+.input-with-counter {
+  position: relative;
+}
+
+.char-counter {
+  position: absolute;
+  right: 10px;
+  bottom: 6px;
+  font-size: 12px;
+  color: #888;
+}
+
+.carform-container .submit-btn {
+  margin-top: 30px;
+  padding: 12px 20px;
+  width: 100%;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carform-container .submit-btn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .carform-container {
+    padding: 20px;
+  }
+
+  .checkbox-group,
+  .button-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
