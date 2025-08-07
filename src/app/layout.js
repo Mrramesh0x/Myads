@@ -13,6 +13,7 @@ import MobileNav from "./mobilenav/page";
 import HeroAdSection from "./heroadsection/page";
 import AllAds from "./postedad/page";
 import MobileCategories from "./mobcategory/page";
+import Link from "next/link";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -43,12 +44,11 @@ export default function RootLayout({ children }) {
         <MobileCategories/>
           <HeroAdSection/>
          <AllAds/>
-         <div className="sell-button-mobile">
-    <img src="/addButton.png" alt="Sell" />
-  </div>
+         <Link href="/postad" className="sell-button-mobile">
+  <img src="/addButton.png" alt="Sell" />
+</Link>
       </div>
-       
-             {children}
+        {children}
       </body>
     </html>
   );
