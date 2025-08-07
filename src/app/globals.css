@@ -21,77 +21,6 @@ color: white;
 
 /* Nav.css */
 
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #2f4f4f;
-  color: white;
-  padding: 15px 20px;
-  position: relative;
-}
-
-.navbar-logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-.navbar-menu {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-item {
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.navbar-item:hover {
-  color: #00ffcc;
-}
-
-/* Hamburger menu icon */
-.menu-icon {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-/* Hide checkbox input */
-.menu-toggle {
-  display: none;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .navbar-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background-color: #2f4f4f;
-    padding: 20px 0;
-    text-align: center;
-  }
-
-  .navbar-menu .navbar-item {
-    padding: 10px 0;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  .menu-toggle:checked + .menu-icon + .navbar-menu {
-    display: flex;
-  }
-}
-
 
 /* Home.css */
 
@@ -356,4 +285,50 @@ color: white;
 .highlight {
   color: #000;
   font-weight: 600;
+}
+
+/* Default: show desktop, hide mobile */
+.desktop-nav {
+  display: block;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+/* On mobile screen, reverse */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+}
+/* Hide by default */
+.sell-button-mobile {
+  display: none;
+}
+
+/* Mobile only */
+@media (max-width: 768px) {
+  .sell-button-mobile {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 70px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sell-button-mobile img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
 }

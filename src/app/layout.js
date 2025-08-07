@@ -4,6 +4,15 @@ import Nav from "./nav/page";
 import "./styles/carform.css"
 import "./styles/photouploader.css"
 import "./styles/allads.css"
+import "./styles/navbar.css"
+import "./styles/category.css"
+import "./styles/mobilenav.css"
+import "./styles/heroadsection.css"
+import CategoryBar from "./cateogry/page";
+import MobileNav from "./mobilenav/page";
+import HeroAdSection from "./heroadsection/page";
+import AllAds from "./postedad/page";
+import MobileCategories from "./mobcategory/page";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -23,7 +32,22 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Nav/>
+        <div className="desktop-nav">
+        <Nav />
+         <CategoryBar/>
+          <HeroAdSection/>
+         <AllAds/>
+      </div>
+      <div className="mobile-nav">
+        <MobileNav />
+        <MobileCategories/>
+          <HeroAdSection/>
+         <AllAds/>
+         <div className="sell-button-mobile">
+    <img src="/addButton.png" alt="Sell" />
+  </div>
+      </div>
+       
              {children}
       </body>
     </html>

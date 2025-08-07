@@ -1,53 +1,51 @@
 "use client";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { FaHeart } from "react-icons/fa";
 
 const AllAds = () => {
   const [ads, setAds] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const fetchAds = async () => {
-    try {
-      const res = await fetch("https://my-ads-back.onrender.com/api/allAds");
-      const data = await res.json();
-      setAds(data);
-      setLoading(false);
-    } catch (error) {
-      console.error("Failed to fetch ads:", error);
-    }
-  };
-
   useEffect(() => {
+    const fetchAds = async () => {
+      try {
+        const res = await fetch("https://my-ads-back.onrender.com/api/allAds");
+        const data = await res.json();
+        setAds(data);
+        setLoading(false);
+      } catch (err) {
+        console.error("Failed to fetch ads", err);
+        setLoading(false);
+      }
+    };
+
     fetchAds();
   }, []);
 
   if (loading) return <p>Loading ads...</p>;
 
   return (
-    <div className="ads-container">
-      {ads.length === 0 ? (
-        <p>No ads yet</p>
-      ) : (
-        ads.map((ad, index) => (
-          <div key={index} className="ad-card">
-            {ad.images && ad.images.length > 0 && (
-              <img
-                src={ad.images[0]}
-                alt={ad.title}
-                className="ad-image"
-              />
-            )}
-            <div className="ad-details">
-              <h2 className="ad-title">{ad.title}</h2>
-              <p className="ad-price">₹{ad.price}</p>
-              <p className="ad-description">{ad.description}</p>
-              <p>{ad.brand} - {ad.model}</p>
-              <p>Driven: {ad.kmDriven} km | Owners: {ad.owners}</p>
-              <p>Location: {ad.city}, {ad.state}</p>
-              <p>Phone: {ad.phone}</p>
+    <div className="ads-section">
+      <h2 className="section-heading">Fresh recommendations</h2>
+
+      <div className="ads-grid">
+        {ads.map((ad) => (
+          <div key={ad._id} className="ad-card">
+            <div className="image-wrapper">
+              <img src={ad?.images?.[0]} alt={ad.title} />
+              <div className="heart-icon">
+                <FaHeart size={14} />
+              </div>
+            </div>
+
+            <div className="ad-price">₹ {ad.price}</div>
+            <div className="ad-title">{ad.title}</div>
+            <div className="ad-location">
+              {ad.city}, {ad.state}
             </div>
           </div>
-        ))
-      )}
+        ))}
+      </div>
     </div>
   );
 };

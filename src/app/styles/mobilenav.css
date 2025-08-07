@@ -1,0 +1,93 @@
+.mobile-navbar {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  font-family: Arial, sans-serif;
+}
+
+/* -------- TOP ROW -------- */
+.mobile-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Hamburger icon */
+.hamburger-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* OLX logo with 8px side gap */
+.mobile-logo-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 0 8px;
+}
+
+.mobile-olx-logo {
+  height: 40px;
+  padding-right: 100px;
+}
+
+/* Location section */
+.mobile-location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.mobile-location-icon {
+  font-size: 18px;
+  color: #000;
+}
+
+.mobile-country-name {
+  font-size: 13px;
+  color: #000;
+}
+
+/* -------- BOTTOM ROW -------- */
+.mobile-bottom {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Search container */
+.mobile-search-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  border: 1px solid #000;
+  border-radius: 6px;
+  padding: 6px 10px;
+  background-color: #f9f9f9;
+}
+
+/* Search icon */
+.mobile-search-icon {
+  font-size: 16px;
+  margin-right: 6px;
+}
+
+/* Input field */
+.mobile-search-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  background: transparent;
+}
+
+/* Heart icon */
+.mobile-heart-icon {
+  font-size: 22px;
+  color: #000;
+  cursor: pointer;
+}

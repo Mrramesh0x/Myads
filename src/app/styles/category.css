@@ -1,0 +1,29 @@
+.category-bar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.category-link {
+  color: #002f34;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.category-link:hover {
+  color: #0bacee;
+}
+
+.category-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}

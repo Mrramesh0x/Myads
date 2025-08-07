@@ -13,14 +13,6 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <h1 className="home-heading">
-        Post New Ad 
-        <GrAddCircle 
-          className="add-icon" 
-          onClick={handleRedirect} 
-          title="Click to post your ad"
-        />
-      </h1>
     </div>
   );
 };
