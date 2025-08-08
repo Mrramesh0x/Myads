@@ -8,12 +8,15 @@ import "./styles/navbar.css"
 import "./styles/category.css"
 import "./styles/mobilenav.css"
 import "./styles/heroadsection.css"
+import "./styles/adform.css"
+import "./styles/dynamic.css"
 import CategoryBar from "./cateogry/page";
 import MobileNav from "./mobilenav/page";
 import HeroAdSection from "./heroadsection/page";
 import AllAds from "./postedad/page";
 import MobileCategories from "./mobcategory/page";
 import Link from "next/link";
+import Home from "./page";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -37,13 +40,13 @@ export default function RootLayout({ children }) {
         <Nav />
          <CategoryBar/>
           <HeroAdSection/>
-         <AllAds/>
+         
       </div>
       <div className="mobile-nav">
         <MobileNav />
         <MobileCategories/>
           <HeroAdSection/>
-         <AllAds/>
+         
          <Link href="/postad" className="sell-button-mobile">
   <img src="/addButton.png" alt="Sell" />
 </Link>

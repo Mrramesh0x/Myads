@@ -3,7 +3,8 @@
 }
 
 .section-heading {
-  font-size: 1.8rem;
+  text-transform:none;
+  font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 1rem;
   color: #222;

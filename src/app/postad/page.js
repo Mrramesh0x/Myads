@@ -63,6 +63,12 @@ const PostAd = () => {
   const router = useRouter();
 
   return (
+    <>
+    <div className="post-top-bar">
+            <button className="back-button" onClick={() => router.back()}>
+           <FaArrowLeft />
+            </button>
+          </div>
     <div className="postad-wrapper">
       <div className="postad-panel">
         <h2 className="postad-title">POST YOUR AD</h2>
@@ -110,6 +116,7 @@ const PostAd = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

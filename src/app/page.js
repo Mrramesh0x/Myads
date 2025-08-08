@@ -5,14 +5,9 @@ import { useRouter } from 'next/navigation';
 import AllAds from './postedad/page';
 
 const Home = () => {
-  const router = useRouter();
-
-  const handleRedirect = () => {
-    router.push('/postad'); 
-  };
-
+ 
   return (
-    <div className="home-container">
+    <div className="home-container"><AllAds/>
     </div>
   );
 };

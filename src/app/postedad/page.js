@@ -26,7 +26,7 @@ const AllAds = () => {
 
   return (
     <div className="ads-section">
-      <h2 className="section-heading">Fresh recommendations</h2>
+      <p className="section-heading">Fresh recommendations</p>
 
       <div className="ads-grid">
         {ads.map((ad) => (
